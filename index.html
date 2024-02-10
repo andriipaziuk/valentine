@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Proposal</title>
+    <title>Ivanka's Valentine</title>
 </head>
 
 <body>
     <div class="container">
         <div class="Mainprompt">
-            <img class="image" src="images/cute.gif"></img>
+          <img src="images/btr.png" class="image image--pos-right" id="btr">
+            <img class="image" src="images/corgi-smirk.gif"></img>
+            <img src="images/flowers.png" class="image image--pos-left" id="flowers">
             <div class="text">
-              <h1 class="hh" id="name">Привіт, красуне!</h1>
-              <p class="pp" id="question">Ти будеш моєю Валентинкою? </p>
+              <h1 class="hh" id="name">ЯКЩО КРАСТИ БТР,<br> ТО ТІЛЬКИ З ТОБОЮ</h1>
+              <p class="pp" id="question">Йдемо викрадати? </p>
             </div>
             <div class="buttons">
                 <button class="button no" id="no-button" onclick="showMessage('No')">Ні</button>
@@ -41,7 +46,7 @@
 
     noButton.style.position = "absolute";
 
-    document.getElementsByClassName("image")[0].src = "images/gun.gif";
+    document.getElementsByClassName("image")[1].src = "images/corgy-crazy.gif";
 
     const randomX = Math.max(0, Math.floor(Math.random() * maxWidth));
     const randomY = Math.max(0, Math.floor(Math.random() * maxHeight));
@@ -50,7 +55,7 @@
     noButton.style.top = randomY + "px";
 
     document.getElementById("question").textContent =
-      "Альо, ти що там задумала?";
+      "«Ні» не приймаються";
     document.getElementById("name").style.display = "none";
 
   }
@@ -60,12 +65,14 @@
     document.getElementById("no-button").remove();
 
     const yesMessage = document.getElementById("question");
-    yesMessage.textContent = "Ти моя бусінка 😘";
+    yesMessage.textContent = "Юхуу! Поїхали!";
     yesMessage.style.display = "block";
     yesMessage.style.fontStyle = "normal";
-    document.getElementsByClassName("image")[0].src = "images/kiss.gif";
+    document.getElementsByClassName("image")[1].src = "images/corgi-this-is-fine.gif";
 
     document.getElementById("yesButton").remove();
+    document.getElementById("btr").remove();
+    document.getElementById("flowers").remove();
   }
 }
     </script>

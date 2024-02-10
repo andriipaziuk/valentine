@@ -5,23 +5,29 @@ body {
   justify-content: space-evenly;
   height: 100vh;
   margin: 0;
-  background: url("images/image.jpg") repeat;
+  background: url("images/image.png") repeat;
+  background-size: cover;
   font-size: 35px;
-  color: rgb(255, 0, 174);
+  color: #FF1B6D;
   height: 100vh;
   position: fixed;
   width: 100%;
+  font-family: 'Noto Serif', serif;
 }
 .hh {
-  -webkit-text-stroke: 2px #71004f;
+  -webkit-text-stroke: 0.5px #885A3E;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 45px;
+  margin: 0;
+  text-shadow: 0 4px 8.7px rgba(0, 0, 0, 0.42);
 }
 .pp {
-  -webkit-text-stroke: 2px #71004f;
+  -webkit-text-stroke: 1px #885A3E;
   font-size: 30px;
-  font-style: oblique;
+  color: #FFDA15;
   font-weight: 800;
+  margin: 0;
+  text-shadow: 0 4px 8.7px rgba(0, 0, 0, 0.42);
 }
 
 body .container {
@@ -36,17 +42,40 @@ body .container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.Mainprompt {
+  white-space: nowrap;
+}
+
 .image {
-  height: calc(100vh - 600px);
+  height: calc(100vh - 500px);
+  position: relative;
+  z-index: 1;
+}
+
+.image--pos-right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 10px;
+  z-index: 0;
+}
+
+.image--pos-left {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -80px;
+  z-index: 0;
 }
 
 .text {
   height: 220px;
+  text-shadow: 0 4px 8.7px rgba(0, 0, 0, 0.42);
 }
 
 .buttons button {
-  background-color: #ff4d79;
-  color: #fff;
+  background-color: #EED032;
+  color: #F9F9F9;
   padding: 10px 30px;
   border: none;
   border-radius: 10px;
@@ -58,10 +87,11 @@ body .container {
 }
 
 .buttons button:hover {
-  background-color: #7c1f37;
+  background-color: #ecc609;
 }
 
 .buttons {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-direction: row;
